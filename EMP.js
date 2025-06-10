@@ -10,6 +10,11 @@ const tableBody = document.querySelector("#employee-table");
 // event listner for adding or updating
 form.addEventListener("submit", function(e){
     e.preventDefault()
+
+    localStorage.setItem("Name",nameInput.value);
+    localStorage.setItem("Email",emailInput.value);
+    localStorage.setItem("role",roleInput.value);
+   
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const role = roleInput.value.trim();
@@ -65,3 +70,4 @@ function deleteEmployee(index){
         renderTable();
     }
 }
+
